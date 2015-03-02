@@ -37,7 +37,7 @@ for dir in ${dirs[@]}; do
 
   pushd ${dir} > /dev/null
 
-  if [ "$OS" == "rhel7" -o "$OS" == "rhel7-candidate" ]; then
+  if [ "$OS" == "rhel7" ]; then
     docker_build ${IMAGE_NAME}-candidate Dockerfile.rhel7
   else
     docker_build ${IMAGE_NAME}-candidate
