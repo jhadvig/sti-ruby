@@ -4,7 +4,7 @@
 # TEST_MODE - If set, build a candidate image and test it
 OS=$1
 VERSION=$2
-
+#qweqwe
 # Array of all versions of Ruby
 declare -a VERSIONS=(2.0)
 
