@@ -9,12 +9,12 @@ set -e
 
 export RACK_ENV=${RACK_ENV:-"production"}
 
+echo "rackup -E ${RACK_ENV}"
+
 if is_puma_installed; then
   exec bundle exec "puma --config ../etc/puma.cfg"
 else
   echo "You might consider adding 'puma' into your Gemfile."
-
-  echo "rackup -E ${RACK_ENV}"
 
   if bundle exec rackup -h &>/dev/null; then
     if [ -f Gemfile ]; then
